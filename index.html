@@ -11,33 +11,64 @@
         #miDiv {
             width: 100px;
             height: 100px;
-            background-color: rgb(50, 100, 46);
+            background-color: rgb(0, 0, 0);
         }
     </style>
 </head>
-<!--MT es la distancia del margen, se cambia con respecto al titulo-->
-<body class="container mt-5"> 
-    <!-- Título -->
-    <h1 class="text-center mb-4" '>Cambia el Color RGB</h1>
-    
-    <div class="mb-4">
-        <div id="miDiv" class="mb-3"></div>
-        <div class="row">
-            <div class="col">
-                <label for="red" class="form-label">Rojo:</label>
-                <input type="range" class="form-range" id="red" min="0" max="255">
+<body>
+    <!-- Encabezado (Header) con Navbar -->
+    <header class="bg-danger text-white">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="#">Mi Sitio Web</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
             </div>
-            <div class="col">
-                <label for="green" class="form-label">Verde:</label>
-                <input type="range" class="form-range" id="green" min="0" max="255">
-            </div>
-            <div class="col">
-                <label for="blue" class="form-label">Azul:</label>
-                <input type="range" class="form-range" id="blue" min="0" max="255">
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Título -->
+        <h1 class="mb-4">Cambia el Color RGB</h1>
+        
+        <div class="mb-4">
+            <div id="miDiv" class="mb-3"></div>
+            <div class="row">
+                <div class="col">
+                    <label for="red" class="form-label">Rojo:</label>
+                    <input type="range" class="form-range" id="red" min="0" max="255">
+                </div>
+                <div class="col">
+                    <label for="green" class="form-label">Verde:</label>
+                    <input type="range" class="form-range" id="green" min="0" max="255">
+                </div>
+                <div class="col">
+                    <label for="blue" class="form-label">Azul:</label>
+                    <input type="range" class="form-range" id="blue" min="0" max="255">
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Pie de página (Footer) -->
+    <footer class="bg-primary text-white text-center py-3 mb-15">
+        &copy; 2023 VAL NaMo. Todos los derechos reservados.
+    </footer>
+
+    <!-- Scripts de Bootstrap y JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Obtener referencias a los controles
         const redSlider = document.getElementById('red');
